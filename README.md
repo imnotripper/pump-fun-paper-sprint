@@ -28,7 +28,7 @@ Parameters were tuned on the kit's 24h dev window by coordinate descent, scored 
 | reversion, default params | −1.67 SOL | −1.72 | 17.6% | 171 | 69 |
 | **DipBounce, tuned** | **−0.03 SOL** | −0.03 | **1.0%** | 92 | 55 |
 
-The tuned set is essentially breakeven on dev with a 1% drawdown and near-identical results across all four failed-transaction draws — it is built to survive the final window's unknown draw, not to overfit one lucky coin. (Full sweep notes are in the build record; the two levers that mattered most were the 600-slot post-exit cooldown and the strict 5-of-6 buyer filter.)
+The tuned set is essentially breakeven on dev with a 1% drawdown and near-identical results across all four failed-transaction draws — it is built to survive the final window's unknown draw, not to overfit one lucky coin. (Full sweep notes are in the build record; the two levers that mattered most were the 600-slot post-exit cooldown and the strict 5-of-6 buyer filter.) One more finding worth recording: the strong tier fires only on an exact 40% drawdown — the narrow band [0.40, 0.40] the sweep converged on — and those full-size entries carry the edge. A test run with the strong tier switched off lost −0.15 SOL mean against −0.03 with it on, so the narrow band is load-bearing, not an accident.
 
 ## Run it
 
